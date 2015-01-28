@@ -1,0 +1,37 @@
+{
+  "ProjectName": "Molteni Dada",
+  "ProjectGuid": "1b4c5ee6-f518-47af-af4d-6ae2a0e97314",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.MolteniDada",
+  "DisplayName": "Molteni Dada",
+  "Author": "",
+  "Description": "",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.5.0",
+  "AndroidPermissions": [],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{d56d2658-b9ec-4984-9e16-b4bf948ba083}",
+  "WP8ProductID": "{9bb90170-e541-45ca-9435-7527dbb83dd3}",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
