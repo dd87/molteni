@@ -1,0 +1,422 @@
+#afui.ios7 #downloadLoading { width: 102%; }
+#indexContainer { right: 0; }
+#catListContainer1 { padding-top: 246px; }
+#catalogo-container .slideSwipe{ height: 2048px !important; }
+#catalogo-container, #catalogo-container .swipe-wrap, #catalogo-container .swipe-wrap .slide, #catalogo-container .swipe-wrap .slide .catEl { height: 100% !important; } 
+#catalogo-container .swipe-wrap .slide .catEl { width: 100% !important; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (orientation:portrait) {
+    #catalogo-container .swipe-wrap .slide .catEl { width: 98% !important; }
+}
+#contentMessage .messageHeader h3 { line-height:28px; }
+    #afui.ios7 .panel .catDesc div h3, .videoItem .desc .valid { font-size: 9px; }
+	#accountIcon .accountBadge, #afui.ios7 .panel  #sideMessage .sideElMessages .dat, #thContainer .thNumber { font-size: 10px; }
+	#previewContainer .desc, #afui.ios7 .panel #contentMessage .messageHeader h3 { font-size: 14px; }
+	#afui.ios7 .panel .customButton, #afui.ios7 .panel  #sideMessage .sideElMessages, .videoItem .desc .deleteButton, #afui.ios7 .newVidElem, .videoItem .desc .title, #afui.ios7 #catalogo .searchResText, #afui.ios7 #catTopBar .extNav .positioning , #afui.ios7 .newCatElem, #afui.ios7 .panel .catDesc div.deleteButton,#afui.ios7 .percDownload, #afui.ios7 #menuDiDestra .contenuto ul li.title, #afui.ios7 .panel .catDesc div h2, #afui.ios7 #prevTopBar .extNav .positioning { font-size: 15px; }
+	#afui.ios7 #menuDiDestra .contenuto ul li, #afui.ios7 .panel #contentMessage p, #afui.ios7 .panel #contentMessage p em, #afui.ios7 .panel #contentMessage .messageContentEl, #indexContainer .idxRicerca input, #indexContainer .idxRisultati .resultLine, #afui.ios7 #chooser.panel .container .text { font-size: 16px; }
+	#swipeTR td, #afui.ios7 .panel #contentMessage .messageHeader h2 p, #afui.ios7 .panel #contentMessage .messageHeader h2 { font-size: 18px; line-height: 1em; }
+	#indexContainer .idxTitolo { font-size: 20px; }
+	#afui.ios7 #ricordaPassword a, #afui.ios7 #loginForm .errorContainer,  #afui.ios7 .panel #contentMessage p a { font-size: 21px !important; }
+	#afui.ios7 #login input[type='text'], #afui.ios7 #login input[type='password'] { font-size: 28px; }
+    #preview-container .slide div.catPw { min-width: 1536px; }
+    #afui.ios7 .panel  #sideMessage .sideElMessages .bull { font-size: 30px; }
+    #catListContainer2 { height: 39.5%; }
+    #afui.ios7 .menuButtonHome { margin-right: 63px; }
+    #previewList { padding-right: 0px; }
+    #videoListContainer1 { height: 46%;width: 100%; position: absolute; background: url(../img/sfumatura.gif) repeat-x left bottom #f3f3f3/*-webkit-linear-gradient(#f3f3f3 40%, #DDDDDD)*/; top: 0; margin-top: 84px; }
+    #videoListContainer2 { height: 45%;width: 100%; position: absolute; background: url(../img/sfumatura.gif) repeat-x left bottom #f3f3f3/*-webkit-linear-gradient(#f3f3f3 40%, #DDDDDD)*/; top: 50%; }
+    #videoListContainer1 #video-thumbs {margin-top: 19%; padding-right: 40px }
+    #videoListContainer2 #video-thumbs2 {margin-top: 19%; padding-right: 40px }
+    /*#videoListContainer1 { padding-top: 522px;  }
+    #videoListContainer2 { padding-top: 540px;  }*/
+}
+@media screen and (orientation:landscape)  {
+    #catalogo-container .slideSwipe{ height: 1536px !important; }
+    #catListContainer1 { padding-top: 76px; }
+    #catListContainer2 { height: 42%; padding-top: 75px; top: 47.7%; }
+	#preview-container .slide div.catPw { width: 2048px; }
+    #videoListContainer1 { height: 50%; }
+    #videoListContainer2 { height: 44%; margin-top: 0;}
+    #videoListContainer1 #video-thumbs {margin-top: 8%; }
+    #videoListContainer2 #video-thumbs2 {margin-top: 8%; }
+/*#videoListContainer1 { padding-top: 284px;  }
+#videoListContainer2 { padding-top: 328px;  }*/
+#catalogo-container .swipe-wrap .slide .catEl:first-child{ background-position: right center !important; background-size: contain !important;  }
+#catalogo-container .swipe-wrap .slide .catEl:last-child{ background-position: left center !important; background-size: contain !important;  }
+}
+/*Fine Non retina*/
+
+/*MODIFICONE*/
+
+img { zoom: 0.5; }
+html, #afui { height: 100% !important }
+body { background: #E6E6E8; font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', Helvetica, Arial, Serif; margin-top: -1000px; z-index: -1; }
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+::-webkit-input-placeholder { color: #909090; }
+#afui.ios7 .panel { background: #E6E6E8; color: #909090; padding-left: 0; padding-right: 0; }
+#afui.ios7 .panel .container { margin-top: 42px; }
+#afui.ios7 #header[visibility='hidden'] { display: none !important; }
+#afui.ios7 .panel .customButton { background: #000000; border-radius: 1px !important; width: 83px; text-align: center; text-decoration: none;
+                            height: 38px; color: #FFF; font-size: 15px; display: block; line-height: 38px; }
+#afui.ios7 .customButton.download { background: #FFFFFF; box-shadow: 1px 1px 1px #000000; color: #000000; font-weight: normal;}
+#afui.ios7 #catalogo, #afui.ios7 #previewItem, #afui.ios7 #videoitem { background: #FFFFFF; padding: 0; }
+#afui.ios7 .loading { text-align: center; position: relative; }
+#afui.ios7 .percDownload { font-size: 15px; position: absolute; height: 20px; width: 20px; line-height: 20px; text-align: center; right: -27px; top: 0; color: #0064FF; font-weight: 100; }
+.ui-icon-loading { display: none !important; }
+.ui-loader h1 { margin: 8px 0 !important; color: #FFFFFF; }
+
+/*Menu*/
+#header { position: relative; }
+#afui.ios7 #navbar footer { margin: 0 auto; width: 53%; }
+#afui.ios7 #navbar .icon { width: 45px; height: 43px; background-size: auto 200% !important; }
+#afui.ios7 #navbar .icon:hover, #afui.ios7 #navbar .icon.pressed { background-position: center bottom !important; }
+#previewIcon, #previewIcon.pressed { background: url(../img/Preview.png) no-repeat center top !important; }
+#libraryIcon, #libraryIcon.pressed { background: url(../img/Library.png) no-repeat center top !important; }
+#libraryIconInt { background: url(../img/Library.png) no-repeat center top !important; width: 45px; height: 34px; margin-top: 8px; display: block; background-size: 100% !important;}
+#previewIconInt { background: url(../img/Preview.png) no-repeat center top !important; width: 45px; height: 34px; margin-top: 8px; display: block; background-size: 100% !important; }
+#videoIcon { background: url(../img/Video.png) no-repeat center 1px !important; margin-top: 1px;}
+#videoIcon.pressed { margin-top: 2px; background-position: center 2px !important;}
+#newsIcon, #newsIcon.pressed { background: url(../img/News.png) no-repeat center top !important; }
+#accountIcon, #accountIcon.pressed { background: url(../img/Messages.png) no-repeat center top !important; }
+#blockMenu { position:absolute; top: 0; right: 0; width: 63px; height: 100%; }
+#blockCat { position:absolute; top: 0; right: 63px; width: 63px; height: 100%; }
+/*Fine Menu*/
+
+/*Menu Laterale*/
+#version { font-size: 16px; margin: 10px; color: #939393; border-bottom: 1px solid #e5e5e5; width: 100%; text-align: right; padding-right: 30px; padding-bottom: 10px; }
+#afui.ios7 #menuDiDestra { z-index: 9999; position: absolute; top: 0; right: -40%; width: 40%; display: none; height: 100%; background: #FFFFFF; }
+#afui.ios7 #menuDiDestra .contenuto { width: 100%; height: 100%; position: relative; }
+#afui.ios7 #menuDiDestra .contenuto ul { position: absolute; bottom: 10px; height: 287px; width: 100%; }
+#afui.ios7 #menuDiDestra .contenuto ul li { height: 57px; line-height: 57px; list-style-type: none; font-size: 16px; color: #929292; position: relative; }
+#afui.ios7 #menuDiDestra .contenuto ul li.title { background: #E5E5E5; font-size: 15px; color: #555555; padding-left: 50px; }
+#afui.ios7 #menuDiDestra .contenuto ul li div { border-bottom: 1px solid #E5E5E5; background: url(../img/arrows.png) no-repeat 90% center; text-indent: 50px; background-size: auto 33%;}
+#afui.ios7 #menuDiDestra .contenuto ul li div img { position: absolute; top: 30%; left: 15px; }
+#afui.ios7 #menuDiDestra .contenuto ul li.logout div { border: 0; }
+#afui.ios7 #overlay { position: absolute; z-index: 9998; display: none; width: 100%; height: 100%;left: 0; top: 0; background: #000000; background: rgba(0,0,0, 0.5) }
+/*Fine Menu Laterale*/
+
+/*Header*/
+#afui.ios7 #header { height: 42px; background: #EEEEEE; position: relative; }
+#afui.ios7 #backButton, #afui.ios7 #pageTitle { display:none; }
+#afui.ios7 .logoHeader { margin: 0 auto; width: 115px; margin-top: 12px; text-align: center; } 
+#afui.ios7 .menuButtonHome { background: url(../img/menu-ico.png) no-repeat left top; width: 18px; height: 19px; margin-top: -22px; margin-right: 40px; background-size: 100%; }
+#afui.ios7 .switcher { width: 18px; height: 19px; margin-top: -22px; margin-right: 77px; }
+#afui.ios7 #newsNavigator { display: none; position: absolute; height: 100%; width: 150px; top: 0; }
+#afui.ios7 #newsNavigator div.left { margin: 0 12px; }
+#afui.ios7 #newsNavigator img { max-height: 60%; vertical-align: middle; display: inline-block; margin-top: 50%; }
+/*Fine Header*/
+    
+/*Login*/
+#afui.ios7 #downloadLoading { position: absolute; width: 100%; height: 100%; background: #000000; opacity: 0.8; z-index: 999999; margin-top: -44px; margin-left: 0px; }
+#afui.ios7 #downloadLoading #logLoading { margin: 67% 49% 0; }
+#afui.ios7 #logoContainer { text-align: center; margin-top: 225px; margin-bottom: 87px;}
+#afui.ios7 #login input[type='text'], #afui.ios7 #login input[type='password'] { font-size: 29px; text-indent: 20px; }
+#afui.ios7 #userContainer { text-align: center; margin-top: 52px; }
+#afui.ios7 #passwordContainer { text-align: center; margin-top: 18px; }
+#afui.ios7 #userContainer input { background: #BCBCBE; border: 0; border-radius: 5px; 
+                                    height: 80px; width: 300px;  }
+#afui.ios7 #passwordContainer input { background: #AAAAAC; color: #FFF; border: 0; 
+                                        border-radius: 5px; height: 80px; width: 300px; }
+#afui.ios7 #submitContainer { width: 300px; margin: 0 auto; margin-top: 19px; }
+#afui.ios7 #submitContainer #ricordaBtn { display: block; background: url(../img/menu-ricordaPW.png) no-repeat left top;
+                                            width: 18px; height: 10px; background-size: 100%; }
+#afui.ios7 #ricordaPassword { height: 40; width: 300px; margin: 10px auto; position: relative; }
+#afui.ios7 #ricordaPassword  .compressed { position: absolute; top: 0; left: 0; height: 0; overflow: hidden; }
+#afui.ios7 #ricordaPassword a { font-size: 21px; line-height: 1.5em; text-decoration: none; color: #929292; }
+#afui.ios7 #login .errorContainer { width: 550px; margin: 25px auto; font-size: 21px !important; line-height: 1.5em; }
+#login .container { display: none; }
+/*Fine Login*/
+    
+/*Chooser*/
+#afui.ios7 #chooser.panel .container { width: 453px; margin: 0 auto; }
+#afui.ios7 #chooser.panel .container .text { margin-top: 310px; font-size: 16px; text-align: center; margin-bottom: 50px; }
+#afui.ios7 #chooser.panel .container #molteniChoose { margin-top: 34px; float: left; width: 256px; }
+#afui.ios7 #chooser.panel .container #molteniChoose img { max-width: 100%; }
+#afui.ios7 #chooser.panel .container #dadaChoose { margin-top: 35px; float: left; width: 156px;  }
+#afui.ios7 #chooser.panel .container #dadaChoose img { max-width: 100%; }
+/*Fine Chooser*/
+    
+/*Preview*/
+#previewContainer { margin-top: 42%; overflow-x: auto; padding-bottom: 20px; position: relative;}
+#pecettoneContainer { width: 100%; position: relative;  }
+#pecettone { width: 100%; position: absolute; top: -20px; z-index: 9999; height: 40px; background: #e5e5e5;}
+.previewItem { float: left; margin-right: 60px; list-style-type: none; min-width: 380px; }
+.previewItem .thumb { width: 463px; height: 570px; background-size: 100% !important; }
+#previewContainer .desc { font-size: 28px; line-height: 1em; color#929292; }
+#previewList { padding-right: 40px; }
+@media screen and (orientation:landscape) {
+	#previewContainer { margin-top: 19%; }
+}
+/*Fine Preview*/
+	
+/*Preview*/
+#pecettoneContainer { width: 100%; position: relative;  }
+#pecettone { width: 100%; position: absolute; top: -10px; z-index: 9999; height: 20px; background: #e5e5e5;}
+.previewItem { float: left; margin-right: 30px; list-style-type: none; min-width: 380px; }
+.previewItem .thumb { width: 231px; height: 285px; background-size: 100% !important; }
+#previewContainer .desc { font-size: 14px; line-height: 1em; color#929292; }
+#previewList { padding-right: 20px; }
+/*Fine Preview*/
+
+/*Preview Dettaglio*/
+#preview-container .slide { text-align: center; }
+#navElPreview { position: fixed; width: 51px; height: 10%; right: 20px; top: 20px; }
+#navElPreview img { max-width: 100%; }
+#afui.ios7 #prevTopBar { position: fixed; top: 0; width: 100%; height: 42px; background: #EEEEEE; }
+#afui.ios7 #prevTopBar .backNav { width: 10%; height: 100%; }
+#afui.ios7 #prevTopBar .extNav { width: 10%; height: 100%; }
+#afui.ios7 #prevTopBar .extNav .positioning { line-height: 37px; font-size: 15px; margin: 0 8px; }
+@media screen and (orientation:landscape) {
+    #afui.ios7 #prevTopBar .extNav .positioning { line-height: 44px; font-size: 15px; margin: 0 8px; }
+}
+#afui.ios7 #prevTopBar .intestazione { width: 60%; height: 100%; text-align: center; }
+#afui.ios7 #prevTopBar .intestazione img { margin-top: 20px; }
+#afui.ios7 .goToStart { background: url(../img/freccia_inizio.png) no-repeat left top; width: 16px; height: 15px; margin-top: 15%; background-size: 100%; }
+#afui.ios7 .goToEnd { background: url(../img/freccia_fine.png) no-repeat left top; width: 16px; height: 15px; margin-top: 15%; background-size: 100%; }
+#afui.ios7 #prevTopBar .thumbOpener { background: url(../img/menu_quadratini.png) no-repeat center center; width: 20%; height: 100%; background-size: 100%; }
+#afui.ios7 #previewItem .enlarge { position: fixed; display: none; top: 0; left: 0; overflow: auto; width: 200%; height: 200%; background: #e7e7e7; }
+#afui.ios7 #previewItem .enlarge .enlargedSwipe { width: 102%; height: 100%; position: absolute; }
+#afui.ios7 #previewItem .enlarge .enlargedItem {  width: 100%; height: 100%; background-size: contain !important; position: relative; /*left: -50%; top: -50%;*/ }
+#preview-container .slide div.catPw { min-width: 0; width: 768px; height: 1024px; background-size: contain !important; background-position: center center !important; }
+/*#afui.ios7 .pinch { position: absolute; overflow: hidden; width: 100%; height: 100%; top: 0; left: 0; z-index: 9999; display: none; }
+.pinch .catPw { height: 100%; }*/
+/*Fine Previw Dettaglio*/
+
+/*Library*/
+#library .catalogoThumb { width: 365px; }
+.catPreview { height: 285px; width: 226px; overflow: hidden; position: relative;}
+.catPreview img { height: 100%; position: absolute; top: 0; left: 0; }
+.catDesc { width: 136px; height: 255px; padding: 15px; padding-top: 0; }
+#catListContainer1 { width: 100%; height: 40%; top: 42px; padding-top: 123px; position: absolute; background: -webkit-linear-gradient(#f3f3f3 33%, #DDDDDD); } 
+#catListContainer2 { width: 100%; height: 40.5%; top: 44.1%; padding-top: 128px; position: absolute; background: -webkit-linear-gradient(#f3f3f3 33%, #DDDDDD) }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (orientation:landscape) {
+    #catListContainer2 { padding-top: 3.8% !important; }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (orientation:portrait) {
+    #catListContainer2 { padding-top: 15.5% !important; }
+}
+#catalogo-thumbs, #catalogo-thumbs2 { height: 100%; top: auto !important; bottom: 0 !important; }
+#afui.ios7 .panel .catDesc .newCatElem { font-size: 15px; }
+#afui.ios7 .panel .catDesc div h2 { font-size: 15px; font-weight:bold; color: #929292; margin: 51px 0 0 0; width: 100px; height: 30px; }
+#afui.ios7 .panel .catDesc div h3 { font-size: 9px; font-weight: 100; color: #929292; margin-top: 20px; margin-bottom: 70px; }
+#afui.ios7 .panel .catDesc div.deleteButton { font-size: 15px; color: #929292; margin-top: 5px; width: 84px; text-align: center; }
+#afui.ios7 .panel .catPreview .newBadge {position: absolute; top: 15px; right: -26px; height: 36px; width: 135px; background: url(../img/ribbon.png) no-repeat left top; }
+#library .deleteButton { display:none !important; }
+/*AGGIUNTA*/
+#catListContainer1, #catListContainer2 { position: relative !important; padding-top: 0 !important; top: auto !important; }
+#catListContainer1 { height: 48% !important; }
+#catListContainer2 { height: 49% !important; }
+@media only screen and (orientation:portrait) {
+    #catListContainer1 { height: 42% !important; }
+    #catListContainer2 { height: 42% !important; }
+}
+#catalogo-thumbs, #catalogo-thumbs2 { height: 286px !important; position: absolute !important; }
+/*FINE AGGIUNTA*/
+/*Fine Library*/
+
+/*Catalogo*/
+#afui.ios7 .panel#catalogo { padding: 0; }
+#catalogo-container .slide div.catEl { width: 768px; height: 1024px; background-size: contain !important; background-position: center center !important; background-color: #E6E6E8 !important;}
+#catalogo-container .swipe-wrap { background-color: #E6E6E8; }
+#thContainer { display: none; position: fixed; background: #000000; bottom: 40px; left: 0; /*height: 301px;*/ width: 100%; height: 175px; z-index: 99998; overflow: hidden !important; }
+#thContainer .thNumber { width: 100%; font-size: 11px; text-align: center; margin: 5px 0; color: #FFFFFF; }
+#indexContainer { display: none; position: fixed; border: 1px solid #929292; background: #FFFFFF; bottom: 0; right: 17px; height: 95.8%; width: 35%; overflow: auto; z-index: 99998; }
+#indexContainer .idxTitolo { background: #E5E5E5; height: 57px; text-align: center; line-height: 57px; font-size: 20px; color: #555555; }
+#indexContainer .idxRicerca { padding: 10px 15px; }
+#indexContainer .idxRicerca input { height: 30px; font-size: 16px; color: #555555; }
+#indexContainer .idxRicerca input::-webkit-input-placeholder { text-align: center; }
+#indexContainer .idxRisultati { border-top: 1px solid #E5E5E5; }
+#indexContainer .idxRisultati .resultLine { height: 55px; border-bottom: 1px solid #E5E5E5; line-height: 55px; font-size: 16px; color: #555555; }
+#indexContainer .idxRisultati .resultLine .lineLeft { width: 38% }
+#indexContainer .idxRisultati .resultLine .lineRight { width: 60%; padding: 5px; }
+#thContainer #thSwipe { z-index: 99999; height: 100%; position: absolute; }
+#thContainer .catElTh { width: 10px;  }
+#sectionsContainer { height: 40px; position: fixed; width: 100%; display: none; background: #e5e5e5; bottom: 0; left: 0; overflow-x: auto; z-index: 99998}
+#sectionSwipe { height: 40px; }
+#swipeTR td { line-height: 32px; font-size: 18px; padding: 0 10px; white-space:nowrap; }
+#catalogo-container .slideSwipe { height: 1024px !important; }
+#navElPreview { position: fixed; width: 51px; height: 51px; right: 20px; top: 20px; }
+#navElPreview img { max-width: 100%; }
+.navLeft{ position: fixed; left: 2px; top: 49%; }
+.navRight { position: fixed; right: 2px; top: 49%; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    .navRight { position: fixed; right: 20px; top: 49%; }
+}
+#afui.ios7 #catTopBar { position: fixed; top: 0; width: 100%; height: 42px; background: #EEEEEE; }
+#afui.ios7 .newCatElem { color: #0064FF; font-size: 15px; font-weight: 100; line-height: 1em; }
+#afui.ios7 #catTopBar .backNav { width: 10%; height: 100%; }
+#afui.ios7 #catTopBar .extNav { width: 10%; height: 100%; }
+#afui.ios7 #catTopBar .extNav .positioning { line-height: 38px; font-size: 15px; margin: 0 7px; }
+@media only screen and (orientation:landscape) {
+    #afui.ios7 #catTopBar .extNav .positioning { line-height: 44px; }
+}
+#afui.ios7 #catTopBar .intestazione { width: 60%; height: 100%; text-align: center; }
+#afui.ios7 #catTopBar .intestazione img { margin-top: 22px; }
+#afui.ios7 #catTopBar .indexOpener { background: url(../img/freccia_indice.png) no-repeat center center; width: 10%; height: 100%;  background-size: 20%;}
+#afui.ios7 #catTopBar .thumbOpener { background: url(../img/menu_quadratini.png) no-repeat center center; width: 10%; height: 100%;  background-size: 20%;}
+#afui.ios7 #catTopBar .goToStart, #afui.ios7 #catTopBar .goToEnd { background-size: 100%; }
+/*.catThumbContainer { height: 20%; width: 100%; position: fixed; bottom: 0; background: rgba(0,0,0,0.5); display: none; }
+.catThumbContainer .catEl { width: 200px; height: 100%; float: left; margin: 10px; background-size: auto 100% !important; }*/
+#afui.ios7 #catalogo .enlarge { position: fixed; display: none; top: -50%; left: -50%; overflow: auto; width: 200%; height: 200%; background: #e7e7e7; }
+#afui.ios7 #catalogo .enlarge .enlargedSwipe { width: 102%; height: 100%; position: absolute; }
+#afui.ios7 #catalogo .enlarge .enlargedItem {  width: 100%; height: 100%; background-size: contain !important; position: relative; /*left: -50%; top: -50%;*/ }
+#afui.ios7 #catalogo .searchResText { font-size: 15px; line-height: 15px; width: 60%; padding: 10%; }
+td.active { color: #FFFFFF; }
+.idxMessages { text-align: center; padding: 2px 0; }
+#indexContainer .idxRisultati { background: #f7f7f7; }
+#indexContainer .idxRisultati .idxLine { padding: 2px 5px; border-bottom: 1px solid #929292;  }
+/*Fine Catalogo*/
+    
+/*Video*/
+#afui.ios7 #video { padding-top: 42px; padding-bottom: 48px; }
+#videoListContainer1 { padding-left: 20px; height: 46%;width: 100%; position: absolute; background: url(../img/sfumatura.gif) repeat-x left bottom #f3f3f3/*-webkit-linear-gradient(#f3f3f3 33%, #DDDDDD)*/; top: 0; margin-top: 42px; }
+#videoListContainer2 { padding-left: 20px; height: 46%; width: 100%; position: absolute; background: url(../img/sfumatura.gif) repeat-x left bottom #f3f3f3/*-webkit-linear-gradient(#f3f3f3 33%, #DDDDDD)*/; top: 50%; }
+#videoListContainer1 #video-thumbs {margin-top: 19%; }
+#videoListContainer2 #video-thumbs2 {margin-top: 19%; }
+/*#videoListContainer1 { padding-left: 40px; width: 100%; height: 42%; top: 85px; padding-top: 496px; position: absolute; background: -webkit-linear-gradient(#f3f3f3 33%, #DDDDDD) } 
+#videoListContainer2 { padding-left: 40px; width: 100%; height: 43%; top: 46.3%; padding-top: 517px; position: absolute; background: -webkit-linear-gradient(#f3f3f3 33%, #DDDDDD) }*/
+#video-thumbs, #video-thumbs2 { height: auto; }
+#afui.ios7 .newVidElem { color: #0064FF; font-size: 15px; line-height: 1em; }
+.videoItem { height: 100%; list-style-type: none; }
+.videoItem .desc { width: 140px; height: 100%; padding: 15px; padding-top: 0; }
+.videoItem .desc .title { font-size: 15px; color: #929292; margin-top: 10px; font-weight: bold; height: 36px; }
+.videoItem .desc .customButton.download { margin-top: 10px; }
+.videoItem .desc .valid { font-size: 18px; color: #929292; margin: 15px 0 15px 0}
+.videoItem .desc .deleteButton { font-size: 15px; line-height: 15px; margin-top: 5px; text-align: center; width: 83px; }
+#videoitem:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+#videoitem video{ vertical-align: middle; } 
+.videoItem .percDownload { display: none; }
+/*Fine Video*/
+    
+/*News*/
+#afui.ios7 .panel#news { padding-top: 42px; padding-bottom: 45px; overflow-x: hidden; box-pack:center; box-align:center;}
+#afui.ios7 .panel#news #newsNavigation { height: 100px; position: fixed; top: 40px; left: 5%; width: 100%; z-index: 9999; }
+#afui.ios7 .panel#news #newsNavigation img { height: 21px; }
+#newsWrapper { position: relative; width: 100%; height: 100%; overflow: auto; }
+#afui.ios7 .panel#news #newsNavigation .newsIcon { margin: 10px 0; }
+.boxNewsShort { min-height: 115px; }
+.boxNewsShort .newsVideo { max-height: 210px; max-width: 296px; padding-left: 47px; display: none; }
+.boxNewsShort .boxNewsL2c1 .newsVideo { max-height: 80px; max-width: 145px; padding-left: 25px; display: block; }
+.boxNewsShort .newsVideo iframe { max-width: 100% !important; max-height: 100% !important; }
+#newsErrorMessage { display: none; text-align: center; }
+@media only screen and (orientation:portrait) {
+    #newsFrame { height: 912px; }
+}
+/*Fine News*/
+
+/*Messaggi*/
+#afui.ios7 .panel#account { padding-top: 43px; }
+#afui.ios7 .panel  #sideMessage { height: 100%; width: 34%; border-right: 1px solid #BEBEBE; overflow: hidden; position: relative;}
+#afui.ios7 .panel  #sideMessage #sideScroll { position: absolute; width: 100%; padding-bottom: 40px; padding-top: 30px;}
+#afui.ios7 .panel  #contentMessage { height: 100%; width: 66%; padding: 0 15px; background: #EEEEEE; }
+#afui.ios7 .panel  #sideMessage .sideElMessages { height: 65px; font-weight: normal; width: 100%; border-bottom: 1px solid #BEBEBE; font-size: 15px; padding-right: 5px; }
+#afui.ios7 .panel  #sideMessage .sideElMessages .bull { display: none; margin-right: 1px; font-size: 30px; position: absolute; left: 2px; }
+#afui.ios7 .panel  #sideMessage .sideElMessages.unread .bull { display: inline-block; color: #0064FF;  }
+#afui.ios7 .panel  #sideMessage .sideElMessages.active { font-weight: bold; background: #EEEEEE; }
+#afui.ios7 .panel  #sideMessage .sideElMessages.unread { font-weight: bold!important; }
+#afui.ios7 .panel  #sideMessage .sideElMessages .tit { width: 100%; line-height: 1em; padding-left: 15px; position: relative; margin-bottom: 10px; padding-top: 10px;  }
+#afui.ios7 .panel  #sideMessage .sideElMessages .dat { font-size: 10px; font-weight: 100; width: 100%; padding-left: 15px; }
+#afui.ios7 .panel #contentMessage { position: relative; }
+#afui.ios7 .panel #contentMessage .messageHeader { height: 75px; width: 100%; margin-bottom: 15px; padding-bottom: 5px; border-bottom: 1px solid #BEBEBE; margin-top: 12px; }
+#afui.ios7 .panel #contentMessage .messageHeader h2 p, #afui.ios7 .panel #contentMessage .messageHeader h2{ font-size: 18px; line-height: 1em; font-weight: bold; height: 30px; }
+#afui.ios7 .panel #contentMessage .messageHeader h3 { font-size: 14px; line-height: 32px; text-indent: 5px; font-weight: normal; }
+#afui.ios7 .panel #contentMessage .messageContentEl { overflow: auto; height: 100%; }
+#afui.ios7 .panel #contentMessage p, #afui.ios7 .panel #contentMessage p em, #afui.ios7 .panel #contentMessage .messageContentEl, #afui.ios7 .panel #contentMessage p a { font-size: 16px; line-height: 21px; }
+#afui.ios7 .panel #contentMessage img { max-width: 60%; margin-right: 10px; }
+#accountIcon .accountBadge { background: url(../img/notification_bubble.png) no-repeat left top; font-size: 10px; text-align: center; line-height: 17px; color: #FFFFFF; width:17px; height:17px; position: absolute; top: 0px; right: 29%; display: none; background-size: 100%; }
+/*Fine Messaggi*/
+    
+/*Footer*/
+#afui #navbar { height: 49px; }
+/*Fine Footer*/
+.thumbDiv { width: 100px !important; }
+    #thContainer { max-height: 180px;  }
+    #swipeTR td { line-height: 2em !important; }
+	
+@media screen and (orientation:landscape) {
+	#afui.ios7 #chooser.panel .container .text { margin-top: 245px; font-size: 16px; margin-bottom: 50px; }
+    #afui.ios7 #logoContainer { text-align: center; margin-top: 145px;margin-bottom: 87px }
+    #preview-container .slide div.catPw{ width: 1024px; height: 768px !important; background-size: contain !important; background-position: center center !important;  }
+    #catListContainer1 { height: 42.5%; top: 42px; padding-top: 38px }
+	#catListContainer2 { height: 42.9%; padding-top: 43px; top: 47.7%; }
+    #catalogo-container .slide{ width: 1024px; }
+    #catalogo-container .slideSwipe { height: 768px !important; }
+	#catalogo-container .slide div.catEl:first-child{ max-width: 50%; width: 50%; height: 768px; background-position: right center !important; background-size: contain !important;  }
+#catalogo-container .slide div.catEl:last-child{ max-width: 50%; width: 50%; height: 768px; background-position: left center !important; background-size: contain !important;  }
+    #indexContainer { height: 94.4%; }
+	#afui.ios7 #catalogo .enlarge .enlargedItem {  width: 50%; height: 100%; background-size: contain !important; position: relative; float: left; /*left: -50%; top: -50%;*/ }
+    #videoListContainer1 { height: 50%; }
+    #videoListContainer2 { height: 46%; margin-top:-12px; }
+    #videoListContainer1 #video-thumbs {margin-top: 8%; }
+    #videoListContainer2 #video-thumbs2 {margin-top: 8%; }
+}
+
+/*Swipe override*/
+.swipe { overflow: hidden; position: relative; visibility: hidden; }
+.swipe-wrap { overflow: hidden; position: relative;  }
+.swipe-wrap > div { float:left; width:100%; position: relative; }
+/*Fine Swipe override*/
+
+/*Animazioni*/
+@-webkit-keyframes blinker {  
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+@-webkit-keyframes spin { 
+	0%	{ -webkit-transform: rotate(0deg); } 
+	100% { -webkit-transform: rotate(360deg); } 
+}
+.spin {
+	-webkit-animation: spin 1s linear infinite;
+}
+.css3-blink {
+  -webkit-animation-name: blinker;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  -webkit-animation-duration: 1s; 
+}	
+/*Fine Animazioni*/
+
+/*ANDROID OVERRIDE
+#afui.ios7 #menuDiDestra .contenuto ul li div img { width: 38px; max-width: 38px !important; }
+#afui.ios7 #chooser.panel .container { width: 470px; }
+#afui.ios7.android #catListContainer1 { padding-top: 237px; height: 42.5%; }
+#afui.ios7.android #catListContainer2 { padding-top: 233px; }
+#afui.ios7.android #preview-container .slide div.catPw { width: 100% !important; max-width: 100%; max-height: 100%; }
+#afui.ios7.android #catalogo-container .slide div.catEl { height: 100% !important; width: 50% !important; max-width: 50%; max-height: 100%; }
+#afui.ios7.android #catalogo-container .slide .slideSwipe { height: 100% !important; }
+.videoItem .deleteButton div { width: 82px; }
+#afui.ios7.android #menuDiDestra {  right: -41%; }
+#afui.ios7 #prevTopBar { width: 101%; left: -1%; }
+#afui.ios7 #prevTopBar .backNav { margin-left: 1%; }
+@media screen and (orientation:portrait) {
+    #afui.ios7.android #catListContainer1 { padding-top: 210px; height: 39%; }
+#afui.ios7.android #catListContainer2 { padding-top: 200px; height: 38%; top: 41.5%;}
+    #afui.ios7 #prevTopBar .extNav .positioning { line-height: 40px; }
+    #afui.ios7 #chooser.panel .container .text { margin-top: 480px; }
+    #afui.ios7 #logoContainer { margin-top: 400px; }
+    #previewContainer { margin-top: 51% !important; }
+    #afui.ios7 .percDownload { right: -33px;  }
+    #afui.ios7.android #preview-container .slide div.catPw, #afui.ios7.android preview-container, #afui.ios7.android preview-container .swipe-wrap,     #afui.ios7.android preview-container .swipe-wrap .slide { height: 1280px; }
+    #afui.ios7.android #prevTopBar .goToStart, #afui.ios7.android #prevTopBar .goToEnd, #afui.ios7.android #catTopBar .goToStart, #afui.ios7.android #catTopBar .goToEnd { margin-top: 15%; }
+    #afui.ios7.android #catalogo-container .slide div.catEl { max-width: 100% !important; width: 100% !important; }
+    #newsFrame { height: 1190px; }
+    #videoListContainer2 { top: 49%; height: 48%; }
+    #afui.ios7 #catalogo .enlarge { height: 100% !important; width: 100% !important; top: 0 !important; left: 0 !important; }
+}
+@media screen and (orientation:landscape) {
+    #previewContainer { margin-top: 15% !important; }
+    #afui.ios7.android #prevTopBar .goToStart, #afui.ios7.android #prevTopBar .goToEnd, #afui.ios7.android #catTopBar .goToStart, #afui.ios7.android #catTopBar .goToEnd { margin-top: 12%; }
+    #afui.ios7.android #logLoading { top: -100px; }
+    #afui.ios7.android #catListContainer1 { padding-top: 53px; }
+    #afui.ios7.android #catListContainer2 { padding-top: 57px; }
+    #afui.ios7.android #preview-container .slide div.catPw, #afui.ios7.android preview-container, #afui.ios7.android preview-container .swipe-wrap, #afui.ios7.android preview-container .swipe-wrap .slide { height: 800px !important; }
+    #newsFrame { height: 710px; }
+}
+/*FINE ANDROID OVERRIDE*/

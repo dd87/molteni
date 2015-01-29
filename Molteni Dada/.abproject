@@ -2,14 +2,13 @@
   "ProjectName": "Molteni Dada",
   "ProjectGuid": "1b4c5ee6-f518-47af-af4d-6ae2a0e97314",
   "projectVersion": 1,
-  "AppIdentifier": "com.telerik.MolteniDada",
+  "AppIdentifier": "it.molteni.monforte",
   "DisplayName": "Molteni Dada",
   "Author": "",
-  "Description": "",
+  "Description": "Molteni Dada",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
-    "1",
     "2"
   ],
   "iOSBackgroundMode": [],
@@ -21,7 +20,7 @@
     "Landscape"
   ],
   "AndroidHardwareAcceleration": "false",
-  "iOSStatusBarStyle": "Default",
+  "iOSStatusBarStyle": "Hidden",
   "Framework": "Cordova",
   "WP8TileTitle": "",
   "WP8Publisher": "",

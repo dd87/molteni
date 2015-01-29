@@ -1,42 +1,280 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World!</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<link href="css/icons.css" rel="stylesheet" type="text/css"></link>
+<link href="css/af.ui.css" rel="stylesheet" type="text/css"></link>
+<link href="css/swipe.css" rel="stylesheet" type="text/css"></link>
+<link href="css/common.css" rel="stylesheet" type="text/css"></link>
+<!--<script type="text/javascript" charset="utf-8" src="http://localhost:58888/_appMobi/myplugin.js"></script>-->
+</head>
+<body>
+	<div id="afui" class='ios7'>
+
+	<div id="header" style="display: none;">
+        <div id="blockMenu" ontouchstart="openMenu()"></div>
+        <div id="blockCat" ontouchstart="switchCat()"></div>
+		<div id="newsNavigator">
+			<div class="left" onclick="historyBk()"><img src="img/sxs.png" style="margin-top: 25px;" /></div>
+			<div class="left"><img src="img/dxs.png" style="margin-top: 25px;" /></div>
+			<div class="left"><img src="img/Update.png" /></div>
+			<div class="clear"></div>
+		</div>
+		<div class='logoHeader'>
+			<img src='img/Molteni-h.png' />
+		</div>
+		<div class='switcher right' ontouchstart="switchCat()">
+			<img src="img/M.png" />
+		</div>
+		<div class='menuButtonHome right' ontouchstart="openMenu()"></div>
+		<div class='clear'></div>
+	</div>
+	
+	<div id="overlay" onclick="closeMenu()"></div>
+	<div id="menuDiDestra">
+		<div class="contenuto">
+            <div id="version">Molteni Dada 1.1</div>
+			<ul>
+				<li class="title">SETTINGS</li>
+				<li class="update" ontouchstart="updateJsonData()"><div><img src="img/Update.png" />Update contents</div></li>
+				<li class="dwn catdwn" ontouchstart="downloadAllCatalogs()"><div><img src="img/dowloadContents.png" />Download all catalogues</div></li>
+				<li class="dwn viddwn" ontouchstart="downloadAllVideos()" ><div><img src="img/dowloadContents.png" />Download all videos</div></li>
+				<li class="logout" ontouchstart="logout()"><div><img src="img/logout.png" />Logout</div></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="content" style="">
+        <!-- Login -->
+		<div class="panel" title="Login" id="login" selected="selected" data-appbuilder-object="page" style="overflow: hidden;">
+			<div id="downloadLoading" style="display: none;">
+				<div class="loading" id="logLoading">
+                    <div class='percDownload'></div>
+                    <img src="img/aggiorna_ico_new.png" class="spin" />
+                </div>
+			</div>
+            <div class="container">
+    			<div id="logoContainer">
+                    <img src="img/login.png" id="logoHome" />
+                </div>
+                <form id="loginForm">
+                    <div id="userContainer">
+                        <input type="text" id="user" name="user" placeholder="User" autocorrect="off" onfocus="hideLogo()" />
+                    </div>
+                    <div id="passwordContainer">
+                        <input type="password" id="password" name="password" placeholder="Password" onfocus="hideLogo()" onblur="$('#logoHome').show()" />
+                    </div>
+					<div id="ricordaPassword">
+						<div class="compressed">
+                            <a href="mailto:customer.service@molteni.it?subject=account_recover account data" target="_blank">
+                                Recover account data
+                            </a>
+                            <br>
+                            <a href="mailto:customer.service@molteni.it?subject=app: recupero dati" target="_blank">
+                                Recupero dati account
+                            </a>
+						</div>
+					</div>
+                    <div id="submitContainer">
+                        <div class="left">
+							<div class="customButton" id="loginButton" onclick="$('#loginForm').submit()">Login</div>
+                            <!--<input type="submit" class="customButton" id="loginButton" value="Login" />-->
+                        </div>
+                        <div class="right">
+                            <div id="ricordaBtn" onclick="showRicorda()"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+					<div class="errorContainer"></div>
+                </form>
             </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+		</div>
+        <!-- /Login -->
+        
+        <!-- Chooser -->
+        <div class="panel" title="Chooser" id="chooser" data-appbuilder-object="page" style="overflow: hidden;">
+            <div class="container">
+                <div class="text">
+                Select one
+                </div>
+                <div id="molteniChoose">
+                    <a href="#preview" onclick="goPreview('molteni')">
+                        <img src="img/logo_01.png" />
+                    </a>
+                </div>
+                <div id="dadaChoose" onclick="goPreview('dada')">
+                    <a href="#preview">
+                        <img src="img/logo_02.png" />
+                    </a>
+                </div>
+            </div>
+    	</div>
+        <!-- /Chooser -->
+        
+		<!-- Preview Lista -->
+		<div class="panel" title="Preview" id="preview" data-appbuilder-object="page" style="overflow: hidden">
+			<div class="container">
+				<div id="previewContainer">
+					<table>
+					<tr id="previewList">
+					
+					</tr>
+					</table>
+				</div>
+				<div id="pecettoneContainer">
+					<div id="pecettone"></div>
+				</div>
+			</div>
+		</div>
+		<!-- /Preview Lista -->
+		
+		<!-- Dettaglio Preview -->
+		<div class="panel" title="PreviewItem" id="previewItem" style="overflow: hidden">
+			<div id='preview-container' class='swipe'>
+				<div class='swipe-wrap' id="pinch"></div>
+			</div>
+			<div id="prevTopBar">
+				<div class="left backNav"><a href="#preview" id="previewIconInt" class="icon"></a></div>
+				<div class="left extNav">
+					<div class='left goToStart'></div>
+					<div class='left positioning'>1</div>
+					<div class='left goToEnd'></div>
+					<div class='clear'></div>
+				</div>
+				<div class="left intestazione">
+					<img src='img/Molteni-h.png' />
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="enlarge">
+				<div class="enlargedSwipe">
+				
+				</div>
+			</div>
+		</div>
+		<!-- /Dettaglio Preview -->
+		
+		<!-- Lista Cataloghi -->
+		<div class="panel" title="Library" id="library" data-appbuilder-object="page" style="overflow: hidden">
+			<div id='catListContainer1'><div id="catalogo-thumbs"></div></div>
+			<div id='catListContainer2'><div id="catalogo-thumbs2"></div></div>
+		</div>
+		<!-- /Lista Cataloghi -->
+		
+		<!-- Dettaglio Catalogo -->
+		<div class="panel" title="Catalogo" id="catalogo" style="overflow: hidden">
+			<div id='catalogo-container' class='swipe'>
+				<div class='swipe-wrap' id="pinch2">
+
+				</div>
+			</div>
+			<!--<div id="navElPreview">
+				<img src="img/close_bt.png" onclick="goLibrary()" />
+			</div>-->
+			<div id="catTopBar">
+				<div class="left backNav"><a href="#library" id="libraryIconInt" class="icon"></a></div>
+				<div class="left extNav">
+					<div class='left goToStart' onclick="prevDirection='uncontrolled';loadCatalogo(currentCatalogo, regularize(0, 0, currentCatalogo), 'null')"></div>
+					<div class='left positioning'>1</div>
+					<div class='left goToEnd' ></div>
+					<div class='clear'></div>
+				</div>
+				<div class="left intestazione">
+					<img src='img/Molteni-h.png' />
+				</div>
+				<div class="left indexOpener" onclick="indexOpener();"></div>
+				<div class='left thumbOpener' onclick="$('#thContainer, #sectionsContainer').toggle();initThScroll();"></div>
+				<div class="clear"></div>
+			</div>
+			<div class="navRight" onclick="catGoNext()"><img src="img/dx.png" /></div>
+			<div class="navLeft" onclick="catGoPrev()"><img src="img/sx.png" /></div>
+			<div id="thContainer">
+				<div id="thSwipe"></div>
+			</div>
+			<div id="sectionsContainer">
+				<table id="sectionSwipe" style="height: 100%;"><tr id="swipeTR" style="height: 100%;"></tr></table>
+			</div>
+			<div id="indexContainer">
+				<div class="idxTitolo"></div>
+				<div class="idxRicerca">
+					<input type="text" id="searchInput" placeholder="Search this issue..." />
+				</div>
+				<div class="idxRisultati">
+				
+				</div>
+			</div>
+			<div class="enlarge">
+				<div class="enlargedSwipe">
+				
+				</div>
+			</div>
+		</div>
+		<!-- /Dettaglio Catalogo -->
+		
+		<!-- Lista Video -->
+		<div class="panel" title="Video" id="video" data-appbuilder-object="page" style="overflow: hidden">
+			<div id='videoListContainer1'><div id="video-thumbs"></div></div>
+			<div id='videoListContainer2'><div id="video-thumbs2"></div></div>
+		</div>
+		<!-- /Lista Video -->
+		
+		<!-- News -->
+		<div class="panel" title="News" id="news" data-appbuilder-object="page" style="overflow: hidden;">
+			<!--<iframe id="news-container" src="" width="75%" height="100%" sandbox="allow-same-origin allow-scripts"></iframe>-->
+			<div id="newsWrapper">
+               <iframe src='' width="100%" height="681" id='newsFrame' sandbox='allow-scripts allow-forms allow-same-origin'></iframe>
+            <div id="newsErrorMessage">
+                <h2>Unable to connect to server. Please check your connection</h2>    
+            </div>
+			</div>
+		</div>
+		<!-- /News -->
+		
+		<!-- Messaggi -->
+		<div class="panel" title="Account" id="account" data-appbuilder-object="page" style="overflow: hidden">
+			<div id="sideMessage" class="left">
+				<div id="sideScroll">
+				
+				</div>
+			</div>
+			<div id="contentMessage" class="left"></div>
+			<div class="clear"></div>
+		</div>
+		<!-- /Messaggi -->
+        
+	</div>
+
+	<div id="navbar" style="display: none;">
+		<a href="#preview" id="previewIcon" class="icon"></a>
+		<a href="#library" id="libraryIcon" class="icon"></a>
+		<a href="#video" id="videoIcon" class="icon"></a>
+		<a href="javascript:loadNews()" id="newsIcon" class="icon"></a>
+		<a href="#account" id="accountIcon" class="icon"><div class='accountBadge'></div></a>
+	</div>
+
+	</div>
+    <script type="text/javascript" charset="utf-8" src="intelxdk.js"></script>
+    <script src="js/appframework.ui.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/general.js"></script>
+    <script async src="js/af.css3animate.js"></script>
+    <script async src="js/swipe.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/hammer.fakemultitouch.js"></script>
+    <script>
+    $.ui.autoLaunch=false;
+    $.ui.useOSThemes=false;
+    $.ui.blockPageScroll();
+    </script>
+    <script src="intelxdk.js"></script>         <!-- phantom library, needed for XDK api calls -->
+    <script src="cordova.js"></script>          <!-- phantom library, needed for Cordova api calls -->
+    <script src="xhr.js"></script>              <!-- phantom library, needed for XDK CORS -->
+	<!--<script async src="http://debug-software.intel.com/target/target-script-min.js#FKJlUpWeJkhRCAnlWGsocsOd10Y6cDzPsbgWGuUQn5M"></script>-->
+    <!--<script type="text/javascript" charset="utf-8" src="cordova.js"></script>-->
+</body>
 </html>
