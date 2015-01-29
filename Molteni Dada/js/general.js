@@ -1,27 +1,22 @@
 var isLandscape;
+var sysPath = "";
 function onDeviceReady() {
     StatusBar.hide();
-    /*intel.xdk.device.updateConnection();
-    setInterval(function() {
-		intel.xdk.device.updateConnection();
-	}, 3000);*/
+    window.requestFileSystem(window.PERSISTENT, 5*1024*1024 /*5MB*/, function(fs){
+        sysPath=fs;
+        sysPath = sysPath.root.fullPath.replace("/Documents", "");
+    }, function(fs){console.log(fs)});
     setInterval(function() {
         if(isConnected) {
 		  updateMessageCall();
         }
 	}, 30000);
-    //intel.xdk.device.updateConnection();
-    //if(intel.xdk.device.platform.toLocaleLowerCase()=="android") {
     if(device.platform.toLocaleLowerCase()=="android") {
         $("#afui").addClass("android");   
     }
     setTimeout(function() {
         $.ui.launch();
         if(window.localStorage.getItem("logged")!=null && window.localStorage.getItem("logged")=="true") {
-            /*if(isConnected) {
-                updateMessageCall();
-                getData()
-            } else {*/
                 try {
                     if(isConnected) {
                       updateMessageCall();
@@ -31,14 +26,11 @@ function onDeviceReady() {
                     }
                 } catch(e) {
                     console.log(e);
-                    //currentError=e; $.ui.loadContent("#error");
                 }
                 $.ui.loadContent("#chooser");
-            //}
         }
     }, 50);
 }
-//document.addEventListener("intel.xdk.device.ready",onDeviceReady,false);
 document.addEventListener("deviceready",onDeviceReady,false);
 var storedData; //json completo dei dati
 var productSelected = "molteni"; //Prodotti da mostrare
@@ -96,7 +88,7 @@ $(function() {
     });
     var loginToLoad = true;
     $("#login").on("loadpanel", function() {
-        intel.xdk.device.hideSplashScreen();
+        //intel.xdk.device.hideSplashScreen();
         if(window.localStorage.getItem("logged")!="true") {
             $("#login .container").show();   
         }
@@ -1691,7 +1683,8 @@ function getLocalUrl(urlTmp) {
 			if(url.indexOf("dummy")==-1) {
                 url = encodeURI(url);
                 //localName = cordova.file.dataDirectory + url.replace("http://molteni.monforte.it/", "");
-                localName = cordova.file.dataDirectory.replace("localhost", "") + url.substring(url.lastIndexOf("/")+1, url.length);
+                //localName = cordova.file.dataDirectory.replace("localhost", "") + url.substring(url.lastIndexOf("/")+1, url.length);
+                localName = "file://" + sysPath + "/Library/NoCloud/" + url.substring(url.lastIndexOf("/")+1, url.length);
                 ret = localName;
 			} else {
 				ret = "img/dummy.png";
